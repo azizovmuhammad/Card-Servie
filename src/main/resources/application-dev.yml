@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: Card-Service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/card_db
+    username: postgres
+    password: 100604
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        show_sql: true
+
+  security:
+    user:
+      name: user
+      password: user
+
+logging:
+  level:
+    root: DEBUG
+    com.yourpackage: DEBUG
+
+server:
+  port: 9999
+

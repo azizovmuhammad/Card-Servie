@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: Card-Service
+
+  datasource:
+    url: jdbc:postgresql://prod-db-server:5432/card_db_prod
+    username: prod_user
+    password: prod_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    properties:
+      hibernate:
+        format_sql: false
+        use_sql_comments: false
+        show_sql: false
+
+  security:
+    user:
+      name: prod_user
+      password: prod_password
+
+logging:
+  level:
+    root: INFO
+    com.yourpackage: INFO
+
+server:
+  port: 8080
